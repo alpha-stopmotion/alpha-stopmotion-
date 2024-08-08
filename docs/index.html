@@ -8,11 +8,15 @@
         body, html {
             margin: 0;
             padding: 0;
-            background-color: white;
-            color: black;
-            font-family: Arial, sans-serif;
             height: 100%;
-            overflow-x: hidden;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-image: url('https://i.postimg.cc/fV2kSrXM/IMG-6640.png');
+            background-size: cover;
+            background-position: center;
         }
 
         main {
@@ -20,6 +24,7 @@
             height: 100vh;
             overflow-y: scroll;
             position: relative;
+            background-color: white; /* Ensures slides have a white background */
         }
 
         section {
@@ -45,9 +50,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background-image: url('https://i.postimg.cc/fV2kSrXM/IMG-6640.png');
-            background-size: cover;
-            background-position: center;
         }
 
         .slide {
@@ -293,6 +295,7 @@
     </script>
 </body>
 </html>
+
 
 
 
