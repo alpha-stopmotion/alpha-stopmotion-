@@ -8,29 +8,46 @@
         body, html {
             margin: 0;
             padding: 0;
-            background-color: black;
-            color: white;
+            background-color: white;
+            color: black;
             font-family: Arial, sans-serif;
             height: 100%;
             overflow-x: hidden;
         }
 
+        /* Fixed Background Style */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('your-background-image.jpg') no-repeat center center;
+            background-size: cover;
+            z-index: -1;
+        }
+
+        /* Slide Container */
+        .slide-container {
+            width: 80vw;
+            height: 80vh;
+            margin: 10vh auto;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        /* Slide Style */
         .slide {
-            width: 100vw;
-            height: 100vh;
+            width: 100%;
+            height: 100%;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             position: relative;
             scroll-snap-align: start;
-        }
-
-        .title-slide {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
         }
 
         .title-slide h1 {
@@ -44,6 +61,7 @@
             align-items: flex-start;
             padding: 20px;
             flex-direction: row;
+            height: 100%;
         }
 
         .content-slide h2 {
@@ -82,39 +100,53 @@
             scroll-snap-type: y mandatory;
             height: 100vh;
             overflow-y: scroll;
+            position: relative;
+            z-index: 1;
         }
     </style>
 </head>
 <body>
+    <!-- Background -->
+    <div class="background"></div>
+
     <main>
         <!-- Slide 1: Title Slide -->
-        <section class="slide title-slide">
-            <h1>Welcome | 欢迎</h1>
+        <section class="slide-container">
+            <div class="slide title-slide">
+                <h1>Welcome | 欢迎</h1>
+            </div>
         </section>
 
         <!-- Slide 2 to 15: Content Slides -->
-        <section class="slide content-slide">
-            <h2>Slide 1 | 幻灯片1</h2>
-            <p>This is the content of slide 1. | 这是幻灯片1的内容。</p>
-            <div class="bottom-left">Bottom Left Text | 底部左侧文本</div>
-            <img src="your-image-1.jpg" alt="Slide 1 Image">
+        <section class="slide-container">
+            <div class="slide content-slide">
+                <h2>Slide 1 | 幻灯片1</h2>
+                <p>This is the content of slide 1. | 这是幻灯片1的内容。</p>
+                <div class="bottom-left">Bottom Left Text | 底部左侧文本</div>
+                <img src="your-image-1.jpg" alt="Slide 1 Image">
+            </div>
         </section>
         
-        <section class="slide content-slide">
-            <h2>Slide 2 | 幻灯片2</h2>
-            <p>This is the content of slide 2. | 这是幻灯片2的内容。</p>
-            <div class="bottom-left">Bottom Left Text | 底部左侧文本</div>
-            <img src="your-image-2.jpg" alt="Slide 2 Image">
+        <section class="slide-container">
+            <div class="slide content-slide">
+                <h2>Slide 2 | 幻灯片2</h2>
+                <p>This is the content of slide 2. | 这是幻灯片2的内容。</p>
+                <div class="bottom-left">Bottom Left Text | 底部左侧文本</div>
+                <img src="your-image-2.jpg" alt="Slide 2 Image">
+            </div>
         </section>
 
         <!-- Repeat the content-slide section for more slides up to Slide 15 -->
         
-        <section class="slide content-slide">
-            <h2>Slide 15 | 幻灯片15</h2>
-            <p>This is the content of slide 15. | 这是幻灯片15的内容。</p>
-            <div class="bottom-left">Bottom Left Text | 底部左侧文本</div>
-            <img src="your-image-15.jpg" alt="Slide 15 Image">
+        <section class="slide-container">
+            <div class="slide content-slide">
+                <h2>Slide 15 | 幻灯片15</h2>
+                <p>This is the content of slide 15. | 这是幻灯片15的内容。</p>
+                <div class="bottom-left">Bottom Left Text | 底部左侧文本</div>
+                <img src="your-image-15.jpg" alt="Slide 15 Image">
+            </div>
         </section>
     </main>
 </body>
 </html>
+
