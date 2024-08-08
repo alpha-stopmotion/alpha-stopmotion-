@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Language Slides</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        .slide {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            scroll-snap-align: start;
+        }
+
+        .title-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .title-slide h1 {
+            font-size: 4em;
+            margin: 0;
+        }
+
+        .content-slide {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+            flex-direction: row;
+        }
+
+        .content-slide h2 {
+            font-size: 2em;
+            margin: 0;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .content-slide p {
+            max-width: 60%;
+            margin: 0;
+            position: absolute;
+            top: 100px;
+            left: 20px;
+        }
+
+        .content-slide .bottom-left {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-size: 1em;
+        }
+
+        .content-slide img {
+            max-width: 300px;
+            max-height: 300px;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+        }
+
+        main {
+            scroll-snap-type: y mandatory;
+            height: 100vh;
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <!-- Slide 1: Title Slide -->
+        <section class="slide title-slide">
+            <h1>Welcome | 欢迎</h1>
+        </section>
+
+        <!-- Slide 2 to 15: Content Slides -->
+        <section class="slide content-slide">
+            <h2>Slide 1 | 幻灯片1</h2>
+            <p>This is the content of slide 1. | 这是幻灯片1的内容。</p>
+            <div class="bottom-left">Bottom Left Text | 底部左侧文本</div>
+            <img src="your-image-1.jpg" alt="Slide 1 Image">
+        </section>
+        
+        <section class="slide content-slide">
+            <h2>Slide 2 | 幻灯片2</h2>
+            <p>This is the content of slide 2. | 这是幻灯片2的内容。</p>
+            <div class="bottom-left">Bottom Left Text | 底部左侧文本</div>
+            <img src="your-image-2.jpg" alt="Slide 2 Image">
+        </section>
+
+        <!-- Repeat the content-slide section for more slides up to Slide 15 -->
+        
+        <section class="slide content-slide">
+            <h2>Slide 15 | 幻灯片15</h2>
+            <p>This is the content of slide 15. | 这是幻灯片15的内容。</p>
+            <div class="bottom-left">Bottom Left Text | 底部左侧文本</div>
+            <img src="your-image-15.jpg" alt="Slide 15 Image">
+        </section>
+    </main>
+</body>
+</html>
