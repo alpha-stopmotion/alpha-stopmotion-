@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha's Chinese slide presentation</title>
+    <title>Alpha's chinese presentation!</title>
     <style>
         body, html {
             margin: 0;
@@ -93,18 +93,28 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            position: relative;
         }
 
         .title-slide h1 {
             font-size: 2em; /* Set title size to 2em */
             margin: 0;
         }
+
+        .slide.no-image img {
+            display: none; /* Hide the image for title slides */
+        }
+
+        /* Enlarged body text for specific slides */
+        .enlarged-text p {
+            font-size: 2em; /* Same size as title text */
+        }
     </style>
 </head>
 <body>
     <main>
         <!-- Title Slide -->
-        <section id="slide-title" class="slide-container active">
+        <section id="slide-title" class="slide-container active title-slide">
             <div class="slide title-slide">
                 <h1>My Presentation | 我的演示文稿</h1>
             </div>
@@ -117,7 +127,7 @@
                     <h2>Me | 我</h2>
                     <p>我叫alpha。 我姓Thanutraphatsitti。我十三岁。我是泰国人。</p>
                 </div>
-                <img src="your-image-1.jpg" alt="Slide 1 Image">
+                <img src="https://i.postimg.cc/vDc69CCt/IMG-6630.png" alt="Slide 1 Image">
             </div>
         </section>
 
@@ -127,126 +137,126 @@
                 <div class="content">
                     <h2>我喜欢：</h2>
                 </div>
-                <img src="your-image-2.jpg" alt="Slide 2 Image">
+                <img src="https://i.postimg.cc/vDc69CCt/IMG-6630.png" alt="Slide 2 Image">
             </div>
         </section>
 
         <!-- Slide 3 -->
-        <section id="slide-3" class="slide-container inactive">
+        <section id="slide-3" class="slide-container inactive title-slide no-image">
             <div class="slide title-slide">
                 <h1>我喜欢：</h1>
             </div>
         </section>
 
         <!-- Slide 4 -->
-        <section id="slide-4" class="slide-container inactive">
+        <section id="slide-4" class="slide-container inactive enlarged-text">
             <div class="slide">
                 <div class="content">
                     <p>读书</p>
                 </div>
-                <img src="your-image-4.jpg" alt="Slide 4 Image">
+                <img src="https://i.postimg.cc/xJdN6Z8Y/IMG-6634.png" alt="Slide 4 Image">
             </div>
         </section>
 
         <!-- Slide 5 -->
-        <section id="slide-5" class="slide-container inactive">
+        <section id="slide-5" class="slide-container inactive enlarged-text">
             <div class="slide">
                 <div class="content">
                     <p>画画</p>
                 </div>
-                <img src="your-image-5.jpg" alt="Slide 5 Image">
+                <img src="https://i.postimg.cc/8fJJSrL0/IMG-6631.png" alt="Slide 5 Image">
             </div>
         </section>
 
         <!-- Slide 6 -->
-        <section id="slide-6" class="slide-container inactive">
+        <section id="slide-6" class="slide-container inactive enlarged-text">
             <div class="slide">
                 <div class="content">
                     <p>看电脑</p>
                 </div>
-                <img src="your-image-6.jpg" alt="Slide 6 Image">
+                <img src="https://i.postimg.cc/0MHMFCKS/IMG-6632.png" alt="Slide 6 Image">
             </div>
         </section>
 
         <!-- Slide 7 -->
-        <section id="slide-7" class="slide-container inactive">
+        <section id="slide-7" class="slide-container inactive enlarged-text">
             <div class="slide">
                 <div class="content">
                     <p>吃米饭</p>
                 </div>
-                <img src="your-image-7.jpg" alt="Slide 7 Image">
+                <img src="https://i.postimg.cc/xJdN6Z8Y/IMG-6634.png" alt="Slide 7 Image">
             </div>
         </section>
 
         <!-- Slide 8 -->
-        <section id="slide-8" class="slide-container inactive">
+        <section id="slide-8" class="slide-container inactive enlarged-text">
             <div class="slide">
                 <div class="content">
                     <p>吃面条</p>
                 </div>
-                <img src="your-image-8.jpg" alt="Slide 8 Image">
+                <img src="https://i.postimg.cc/4KPhbGJB/IMG-6635.png" alt="Slide 8 Image">
             </div>
         </section>
 
         <!-- Slide 9 -->
-        <section id="slide-9" class="slide-container inactive">
+        <section id="slide-9" class="slide-container inactive enlarged-text">
             <div class="slide">
                 <div class="content">
                     <p>喝水</p>
                 </div>
-                <img src="your-image-9.jpg" alt="Slide 9 Image">
+                <img src="https://i.postimg.cc/bdWSR3hc/IMG-6633.png" alt="Slide 9 Image">
             </div>
         </section>
 
         <!-- Slide 10 -->
-        <section id="slide-10" class="slide-container inactive">
+        <section id="slide-10" class="slide-container inactive enlarged-text">
             <div class="slide">
                 <div class="content">
                     <p>喝奶茶</p>
                 </div>
-                <img src="your-image-10.jpg" alt="Slide 10 Image">
+                <img src="https://i.postimg.cc/SXkMMRpn/IMG-6636.png" alt="Slide 10 Image">
             </div>
         </section>
 
         <!-- Slide 11 -->
-        <section id="slide-11" class="slide-container inactive">
+        <section id="slide-11" class="slide-container inactive title-slide no-image">
             <div class="slide title-slide">
                 <h1>我不喜欢：</h1>
             </div>
         </section>
 
         <!-- Slide 12 -->
-        <section id="slide-12" class="slide-container inactive">
+        <section id="slide-12" class="slide-container inactive enlarged-text">
             <div class="slide">
                 <div class="content">
                     <p>吃面包</p>
                 </div>
-                <img src="your-image-12.jpg" alt="Slide 12 Image">
+                <img src="https://postimg.cc/tYDTMk04" alt="Slide 12 Image">
             </div>
         </section>
 
         <!-- Slide 13 -->
-        <section id="slide-13" class="slide-container inactive">
+        <section id="slide-13" class="slide-container inactive enlarged-text">
             <div class="slide">
                 <div class="content">
                     <p>喝可乐</p>
                 </div>
-                <img src="your-image-13.jpg" alt="Slide 13 Image">
+                <img src="https://i.postimg.cc/3kgGNpzM/IMG-6637.jpg" alt="Slide 13 Image">
             </div>
         </section>
 
         <!-- Slide 14 -->
-        <section id="slide-14" class="slide-container inactive">
+        <section id="slide-14" class="slide-container inactive enlarged-text">
             <div class="slide">
                 <div class="content">
                     <p>看电影</p>
                 </div>
-                <img src="your-image-14.jpg" alt="Slide 14 Image">
+                <img src="https://i.postimg.cc/qhC4BcZy/IMG-6639.png" alt="Slide 14 Image">
             </div>
         </section>
 
         <!-- Slide 15 -->
-        <section id="slide-15" class="slide-container inactive">
+        <section id="slide-15" class="slide-container inactive title-slide no-image">
             <div class="slide title-slide">
                 <h1>谢谢 | Thank you</h1>
             </div>
@@ -254,9 +264,3 @@
     </main>
 </body>
 </html>
-
-
-
-
-
-
