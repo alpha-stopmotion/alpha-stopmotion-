@@ -15,18 +15,6 @@
             overflow-x: hidden;
         }
 
-        /* Fixed Background Style */
-        .background {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('your-background-image.jpg') no-repeat center center;
-            background-size: cover;
-            z-index: -1;
-        }
-
         /* Slide Container */
         .slide-container {
             width: 80vw;
@@ -38,7 +26,7 @@
             overflow: hidden;
             position: relative;
             z-index: 1;
-            transition: transform 0.5s, opacity 0.5s;
+            transition: transform 0.5s ease, opacity 0.5s ease;
         }
 
         /* Slide Style */
@@ -140,9 +128,6 @@
     </style>
 </head>
 <body>
-    <!-- Background -->
-    <div class="background"></div>
-
     <main>
         <!-- Title Slide -->
         <section id="slide-title" class="slide-container active">
@@ -344,5 +329,6 @@
     </script>
 </body>
 </html>
+
 
 
