@@ -3,39 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slide Transition Example</title>
+    <title>idk</title>
     <style>
-        body, html {
+        /* Reset CSS */
+        * {
             margin: 0;
             padding: 0;
-            height: 100%;
-            overflow: hidden;
-            font-family: Arial, sans-serif;
+            box-sizing: border-box;
         }
 
-        body {
-            /* Remove background image */
-            /* background-image: url('https://i.postimg.cc/fV2kSrXM/IMG-6640.png'); */
-            /* background-size: cover; */
-            /* background-position: center; */
+        body, html {
+            height: 100%;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
         }
 
         main {
-            scroll-snap-type: y mandatory;
             height: 100vh;
             overflow-y: scroll;
-            position: relative;
-            background-color: white; /* Ensures slides have a white background */
         }
 
         section {
-            scroll-snap-align: start;
+            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            box-sizing: border-box;
-            position: relative;
         }
 
         .slide-container {
@@ -43,11 +35,6 @@
             max-width: 800px;
             height: 80vh;
             background: white;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-            overflow: hidden;
-            position: relative;
-            transition: opacity 0.5s ease, transform 0.5s ease;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -58,27 +45,12 @@
             height: 100%;
             display: flex;
             flex-direction: row;
-            padding: 20px;
-            box-sizing: border-box;
-            position: relative;
-            justify-content: space-between;
+            align-items: center;
+            justify-content: center;
         }
 
         .slide .content {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
             width: calc(100% - 220px);
-            height: 100%;
-        }
-
-        .slide h2, .slide p {
-            color: black;
-            margin: 0;
-        }
-
-        .slide p {
-            font-size: 1em;
         }
 
         .slide img {
@@ -86,49 +58,19 @@
             max-height: 200px;
             margin-left: auto;
         }
-
-        .slide-container.active {
-            opacity: 1;
-            transform: scale(1);
-        }
-
-        .slide-container.inactive {
-            opacity: 0;
-            transform: scale(0.9);
-        }
-
-        .title-slide {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
-
-        .title-slide h1 {
-            font-size: 2em;
-            margin: 0;
-        }
-
-        .slide.no-image img {
-            display: none;
-        }
-
-        .enlarged-text p {
-            font-size: 2em;
-        }
     </style>
 </head>
 <body>
     <main>
         <!-- Title Slide -->
-        <section id="slide-title" class="slide-container active title-slide no-image">
-            <div class="slide title-slide">
+        <section id="slide-title" class="slide-container">
+            <div class="slide">
                 <h1>My Presentation | 我的演示文稿</h1>
             </div>
         </section>
 
         <!-- Slide 1 -->
-        <section id="slide-1" class="slide-container inactive">
+        <section id="slide-1" class="slide-container">
             <div class="slide">
                 <div class="content">
                     <h2>Me | 我</h2>
@@ -139,7 +81,7 @@
         </section>
 
         <!-- Slide 2 -->
-        <section id="slide-2" class="slide-container inactive">
+        <section id="slide-2" class="slide-container">
             <div class="slide">
                 <div class="content">
                     <h2>我喜欢：</h2>
@@ -150,14 +92,14 @@
         </section>
 
         <!-- Slide 3 -->
-        <section id="slide-3" class="slide-container inactive title-slide no-image">
-            <div class="slide title-slide">
+        <section id="slide-3" class="slide-container">
+            <div class="slide">
                 <h1>我喜欢：</h1>
             </div>
         </section>
 
         <!-- Slide 4 -->
-        <section id="slide-4" class="slide-container inactive enlarged-text">
+        <section id="slide-4" class="slide-container">
             <div class="slide">
                 <div class="content">
                     <p>读书</p>
@@ -167,7 +109,7 @@
         </section>
 
         <!-- Slide 5 -->
-        <section id="slide-5" class="slide-container inactive enlarged-text">
+        <section id="slide-5" class="slide-container">
             <div class="slide">
                 <div class="content">
                     <p>画画</p>
@@ -177,7 +119,7 @@
         </section>
 
         <!-- Slide 6 -->
-        <section id="slide-6" class="slide-container inactive enlarged-text">
+        <section id="slide-6" class="slide-container">
             <div class="slide">
                 <div class="content">
                     <p>看电脑</p>
@@ -187,7 +129,7 @@
         </section>
 
         <!-- Slide 7 -->
-        <section id="slide-7" class="slide-container inactive enlarged-text">
+        <section id="slide-7" class="slide-container">
             <div class="slide">
                 <div class="content">
                     <p>吃米饭</p>
@@ -197,7 +139,7 @@
         </section>
 
         <!-- Slide 8 -->
-        <section id="slide-8" class="slide-container inactive enlarged-text">
+        <section id="slide-8" class="slide-container">
             <div class="slide">
                 <div class="content">
                     <p>吃面条</p>
@@ -207,7 +149,7 @@
         </section>
 
         <!-- Slide 9 -->
-        <section id="slide-9" class="slide-container inactive enlarged-text">
+        <section id="slide-9" class="slide-container">
             <div class="slide">
                 <div class="content">
                     <p>喝水</p>
@@ -217,7 +159,7 @@
         </section>
 
         <!-- Slide 10 -->
-        <section id="slide-10" class="slide-container inactive enlarged-text">
+        <section id="slide-10" class="slide-container">
             <div class="slide">
                 <div class="content">
                     <p>喝奶茶</p>
@@ -227,14 +169,14 @@
         </section>
 
         <!-- Slide 11 -->
-        <section id="slide-11" class="slide-container inactive title-slide no-image">
-            <div class="slide title-slide">
+        <section id="slide-11" class="slide-container">
+            <div class="slide">
                 <h1>我不喜欢：</h1>
             </div>
         </section>
 
         <!-- Slide 12 -->
-        <section id="slide-12" class="slide-container inactive enlarged-text">
+        <section id="slide-12" class="slide-container">
             <div class="slide">
                 <div class="content">
                     <p>吃面包</p>
@@ -244,7 +186,7 @@
         </section>
 
         <!-- Slide 13 -->
-        <section id="slide-13" class="slide-container inactive enlarged-text">
+        <section id="slide-13" class="slide-container">
             <div class="slide">
                 <div class="content">
                     <p>喝可乐</p>
@@ -254,7 +196,7 @@
         </section>
 
         <!-- Slide 14 -->
-        <section id="slide-14" class="slide-container inactive enlarged-text">
+        <section id="slide-14" class="slide-container">
             <div class="slide">
                 <div class="content">
                     <p>看电影</p>
@@ -264,8 +206,8 @@
         </section>
 
         <!-- Final Slide -->
-        <section id="slide-15" class="slide-container inactive title-slide no-image">
-            <div class="slide title-slide">
+        <section id="slide-15" class="slide-container">
+            <div class="slide">
                 <h1>谢谢</h1>
             </div>
         </section>
@@ -296,8 +238,3 @@
     </script>
 </body>
 </html>
-
-
-
-
-
