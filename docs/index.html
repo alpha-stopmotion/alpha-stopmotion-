@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alpha's chinese presentation!</title>
+    <title>Slide Transition Example</title>
     <style>
         body, html {
             margin: 0;
@@ -24,18 +24,27 @@
 
         section {
             scroll-snap-align: start;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            box-sizing: border-box;
+            position: relative;
         }
 
         .slide-container {
             width: 80vw;
+            max-width: 800px;
             height: 80vh;
-            margin: 10vh auto;
-            background-color: white;
+            background: white;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             border-radius: 10px;
             overflow: hidden;
             position: relative;
             transition: opacity 0.5s ease, transform 0.5s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .slide {
@@ -51,19 +60,18 @@
         .slide .content {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            width: calc(100% - 220px); /* Adjust width for image */
+            justify-content: flex-start;
+            width: calc(100% - 220px);
             height: 100%;
         }
 
-        .slide h2 {
+        .slide h2, .slide p {
             color: black;
             margin: 0;
         }
 
         .slide p {
-            color: black;
-            margin: 0;
+            font-size: 1em;
         }
 
         .slide img {
@@ -79,13 +87,8 @@
         }
 
         .slide-container.inactive {
-            opacity: 0.5;
-            transform: scale(0.8);
-        }
-
-        .slide-container.previous {
-            opacity: 0.2;
-            transform: scale(0.6);
+            opacity: 0;
+            transform: scale(0.9);
         }
 
         .title-slide {
@@ -93,28 +96,34 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            position: relative;
         }
 
         .title-slide h1 {
-            font-size: 2em; /* Set title size to 2em */
+            font-size: 2em;
             margin: 0;
         }
 
         .slide.no-image img {
-            display: none; /* Hide the image for title slides */
+            display: none;
         }
 
-        /* Enlarged body text for specific slides */
         .enlarged-text p {
-            font-size: 2em; /* Same size as title text */
+            font-size: 2em;
+        }
+
+        /* Background image for slides */
+        .slide-container {
+            background-image: url('https://i.postimg.cc/fV2kSrXM/IMG-6640.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
     </style>
 </head>
 <body>
     <main>
         <!-- Title Slide -->
-        <section id="slide-title" class="slide-container active title-slide">
+        <section id="slide-title" class="slide-container active title-slide no-image">
             <div class="slide title-slide">
                 <h1>My Presentation | 我的演示文稿</h1>
             </div>
@@ -136,6 +145,7 @@
             <div class="slide">
                 <div class="content">
                     <h2>我喜欢：</h2>
+                    <p>我喜欢：</p>
                 </div>
                 <img src="https://i.postimg.cc/vDc69CCt/IMG-6630.png" alt="Slide 2 Image">
             </div>
@@ -262,5 +272,30 @@
             </div>
         </section>
     </main>
+    <script>
+        // JavaScript to handle slide transitions
+        const slides = document.querySelectorAll('.slide-container');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active', i === index);
+                slide.classList.toggle('inactive', i !== index);
+            });
+        }
+
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY;
+            const slideHeight = window.innerHeight;
+            const newSlide = Math.round(scrollPosition / slideHeight);
+            if (newSlide !== currentSlide) {
+                currentSlide = newSlide;
+                showSlide(currentSlide);
+            }
+        });
+
+        showSlide(currentSlide);
+    </script>
 </body>
 </html>
+
