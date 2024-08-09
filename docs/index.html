@@ -227,27 +227,28 @@ section {
     </main>
 
     <script>
-        const slides = document.querySelectorAll('.slide-container');
-        let currentSlide = 0;
+      const slides = document.querySelectorAll('.slide-container');
+let currentSlide = 0;
 
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.classList.toggle('active', i === index);
-                slide.classList.toggle('inactive', i !== index);
-            });
-        }
+function showSlide(index) {
+    slides.forEach((slide, i) => {
+        slide.classList.toggle('active', i === index);
+    });
+}
 
-        window.addEventListener('scroll', () => {
-            const scrollPosition = window.scrollY;
-            const slideHeight = window.innerHeight;
-            const newSlide = Math.round(scrollPosition / slideHeight);
-            if (newSlide !== currentSlide) {
-                currentSlide = newSlide;
-                showSlide(currentSlide);
-            }
-        });
-
+window.addEventListener('scroll', () => {
+    const scrollPosition = window.scrollY;
+    const slideHeight = window.innerHeight;
+    const newSlide = Math.round(scrollPosition / slideHeight);
+    if (newSlide !== currentSlide) {
+        currentSlide = newSlide;
         showSlide(currentSlide);
+    }
+});
+
+// Initialize the first slide as active
+showSlide(currentSlide);
+  
     </script>
 </body>
 </html>
