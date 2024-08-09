@@ -5,100 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Presentation | 我的演示文稿</title>
     <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            font-family: Arial, sans-serif;
-            overflow-x: hidden;
-            background-color: #FFFFFF; /* Set background color to white */
-        }
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+    background-color: #FFFFFF; /* White background */
+}
 
-        main {
-            scroll-snap-type: y mandatory;
-            height: 100vh;
-            overflow-y: scroll;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
+main {
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-        section {
-            scroll-snap-align: start;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            width: 100%;
-            position: relative;
-            box-sizing: border-box;
-        }
+section {
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+}
 
-        .slide-container {
-            width: 80vw;
-            max-width: 800px;
-            height: 60vh; /* Adjusted height to center lower */
-            background: rgba(255, 255, 255, 0.9);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-            position: relative;
-            padding: 20px;
-            box-sizing: border-box;
-            transition: opacity 0.5s ease, transform 0.5s ease;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            opacity: 0;
-            transform: scale(0.9);
-        }
+.slide-container {
+    width: 80vw;
+    max-width: 800px;
+    height: 60vh; /* Adjust height to center lower */
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    position: relative;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    opacity: 0;
+    transform: scale(0.9);
+}
 
-        .slide-container.active {
-            opacity: 1;
-            transform: scale(1);
-        }
+.slide-container.active {
+    opacity: 1;
+    transform: scale(1);
+}
 
-        .title-slide {
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-        }
+.title-slide {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 
-        .title-slide h1 {
-            font-size: 2em;
-            margin: 0;
-        }
+.title-slide h1 {
+    font-size: 2em;
+    margin: 0;
+}
 
-        .slide-content {
-            flex: 1;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-        }
+.slide-content {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
 
-        .slide-content h2 {
-            margin: 0;
-            font-size: 1.5em;
-        }
+.slide-content h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
 
-        .slide-content p {
-            margin: 0;
-            font-size: 1em;
-            align-self: flex-end;
-        }
+.slide-content p {
+    margin: 0;
+    font-size: 1em;
+    align-self: flex-end;
+}
 
-        .enlarged-text p {
-            font-size: 2em;
-        }
+.enlarged-text p {
+    font-size: 2em;
+}
 
-        .slide img {
-            max-width: 200px;
-            max-height: 200px;
-            margin-left: 20px;
-        }
+.slide img {
+    max-width: 200px;
+    max-height: 200px;
+    margin-left: 20px;
+}
 
-        .slide.no-image img {
-            display: none;
-        }
+.slide.no-image img {
+    display: none;
+}
+
     </style>
 </head>
 <body>
